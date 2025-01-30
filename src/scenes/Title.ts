@@ -61,9 +61,6 @@ export default class Title extends Phaser.Scene {
 		new ScriptNode(text_1);
 
 		this.events.emit("scene-awake");
-		this.input.on("pointerdown", () => {
-			this.scene.start("Game");
-		});
 	}
 
 	/* START-USER-CODE */
@@ -73,6 +70,9 @@ export default class Title extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
+		this.input.on("pointerdown", () => {
+			this.scene.start("Play");
+		});
 	}
 
 	/* END-USER-CODE */

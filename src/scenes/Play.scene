@@ -6,7 +6,7 @@
         "autoImport": true,
         "preloadPackFiles": [],
         "createMethodName": "editorCreate",
-        "sceneKey": "Game",
+        "sceneKey": "Play",
         "compilerOutputLanguage": "TYPE_SCRIPT",
         "borderWidth": 1280,
         "borderHeight": 720
@@ -27,6 +27,7 @@
             "type": "Sprite",
             "id": "2b012393-24bf-4d82-a8f5-aba7c073bbca",
             "label": "charactor",
+            "blendMode": -1,
             "texture": {
                 "key": "DALL·E Jan 30 2025"
             },
@@ -35,7 +36,7 @@
             "scaleX": 0.11595452439536336,
             "scaleY": 0.11595452439536336,
             "ArcadeComponent.active": true,
-            "allowGravity": false,
+            "body.friction.x": 10,
             "body.width": 1024,
             "body.height": 1024,
             "animationPlayMethod": 1
@@ -47,5 +48,14 @@
         "url": "https://phaser.io/editor",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 5
-    }
+    },
+    "lists": [
+        {
+            "id": "e4bb2f18-e2eb-42d8-990b-2bc641185a58",
+            "label": "Charactors",
+            "objectIds": [
+                "2b012393-24bf-4d82-a8f5-aba7c073bbca"
+            ]
+        }
+    ]
 }

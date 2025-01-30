@@ -1,7 +1,7 @@
 import Phaser from "phaser";
 import Title from "./scenes/Title";
 import Preload from "./scenes/Preload";
-import Game from "./scenes/Game";
+import Play from "./scenes/Play";
 
 class Boot extends Phaser.Scene {
 
@@ -36,7 +36,7 @@ window.addEventListener('load', function () {
         arcade: {
         }
     },
-		scene: [Boot, Preload, Title, Game]
+		scene: [Boot, Preload, Title, Play]
 	});
 
 	game.scene.start("Boot");
