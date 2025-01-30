@@ -29,6 +29,7 @@ export default class Play extends Phaser.Scene {
 		charactor.scaleY = 0.11595452439536336;
 		this.physics.add.existing(charactor, false);
 		charactor.body.friction.x = 10;
+		charactor.body.collideWorldBounds = true;
 		charactor.body.setSize(1024, 1024, false);
 		charactor.play("");
 
@@ -75,7 +76,7 @@ export default class Play extends Phaser.Scene {
 		} else if(cursors.right.isDown) {
 			character.body.setVelocityX(160);
 		} else {
-			character.body.setVelocityX(0);
+			// character.body.setVelocityX(0);
 		}
 	}
 	/* END-USER-CODE */

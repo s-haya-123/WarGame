@@ -37,6 +37,7 @@
             "scaleY": 0.11595452439536336,
             "ArcadeComponent.active": true,
             "body.friction.x": 10,
+            "collideWorldBounds": true,
             "body.width": 1024,
             "body.height": 1024,
             "animationPlayMethod": 1
