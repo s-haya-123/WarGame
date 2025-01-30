@@ -1,0 +1,109 @@
+{
+    "id": "251f5356-cb0b-4d7f-b9c8-7ac14448c47a",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapWidth": 128,
+        "snapHeight": 128,
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Title",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "e7377a5d-630a-4e6c-aada-031a22fca7de",
+            "label": "______________________Jan_30_2025",
+            "texture": {
+                "key": "デフォルメキャラリクエスト ゲーム背景 Jan 30 2025"
+            },
+            "scaleX": 1.2489809409725727,
+            "scaleY": 0.8267346463681621,
+            "originX": 0,
+            "originY": 0
+        },
+        {
+            "type": "Layer",
+            "id": "d0e20ab7-0b9a-4508-a1d6-72c102b4d2f6",
+            "label": "TitleLayer",
+            "blendMode": -1,
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "00908d5f-e6d5-4452-8409-4e83d5a0e42d",
+                    "label": "rectangle_1",
+                    "x": 324,
+                    "y": 323,
+                    "scaleX": 4.958887599457315,
+                    "scaleY": 0.8468668568917865,
+                    "originX": 0,
+                    "originY": 0,
+                    "isFilled": true,
+                    "fillColor": "#9fac5d",
+                    "width": 128,
+                    "height": 128,
+                    "list": [
+                        {
+                            "type": "Glow",
+                            "id": "04ea53c7-c7dd-4f9e-90ff-c5b098a75609",
+                            "label": "glowFx"
+                        }
+                    ]
+                },
+                {
+                    "type": "Text",
+                    "id": "1caebc9c-8e36-4a53-826a-0590950394f3",
+                    "label": "War",
+                    "x": 336,
+                    "y": 320,
+                    "text": "Simple War",
+                    "fontSize": "100px",
+                    "fontStyle": "bold italic",
+                    "shadow.offsetX": 10,
+                    "shadow.offsetY": 10,
+                    "shadow.fill": true
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "72eebf27-c069-4b4d-b37b-e495e069c3e5",
+            "label": "Button",
+            "displayName": "Button",
+            "blendMode": -1,
+            "list": [
+                {
+                    "type": "Text",
+                    "id": "a2179afa-b132-4ff4-b078-2ad765a88502",
+                    "label": "text_1",
+                    "x": 524,
+                    "y": 453,
+                    "text": "Start",
+                    "fontSize": "80px",
+                    "fontStyle": "bold",
+                    "color": "#739941ff",
+                    "strokeThickness": 10,
+                    "shadow.stroke": true,
+                    "list": [
+                        {
+                            "type": "ScriptNode",
+                            "id": "e2f1963e-0e78-4b30-9877-52de6d7a39bd",
+                            "label": "scriptnode_1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

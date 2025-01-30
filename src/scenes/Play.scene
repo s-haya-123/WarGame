@@ -1,0 +1,51 @@
+{
+    "id": "1457b34b-dc9a-480d-a715-b6e1d93ba94e",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Game",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "0be0eb40-5619-441e-b7a9-551758244fc3",
+            "label": "image_1",
+            "texture": {
+                "key": "gameBackground"
+            },
+            "x": 638,
+            "y": 307,
+            "scaleX": 1.305707420481132
+        },
+        {
+            "type": "Sprite",
+            "id": "2b012393-24bf-4d82-a8f5-aba7c073bbca",
+            "label": "charactor",
+            "texture": {
+                "key": "DALL·E Jan 30 2025"
+            },
+            "x": 704,
+            "y": 660,
+            "scaleX": 0.11595452439536336,
+            "scaleY": 0.11595452439536336,
+            "ArcadeComponent.active": true,
+            "allowGravity": false,
+            "body.width": 1024,
+            "body.height": 1024,
+            "animationPlayMethod": 1
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}
