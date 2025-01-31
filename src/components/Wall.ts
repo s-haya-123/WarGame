@@ -35,6 +35,9 @@ export default class Wall extends Phaser.GameObjects.Rectangle {
 		this.body.setVelocityY(100);
 	}
 
+	public overlapBullet() {
+	}
+
 	/* END-USER-CODE */
 }
 

@@ -46,6 +46,8 @@ export default class Play extends Phaser.Scene {
 	}
 
 	private charactors!: Phaser.GameObjects.Sprite[];
+	private walls: Wall[] = [];
+	private bullets: Bullet[] = [];
 
 	/* START-USER-CODE */
 
@@ -66,11 +68,15 @@ export default class Play extends Phaser.Scene {
 			{
 				delay: 2000,
 				callback: () => {
-					console.log('create wall');
 					const wall = new Wall(this);
 					this.add.existing(wall);
 					const position = generateWall(decidePosition());
 					wall.generate(position.x, position.y);
+					this.walls.push(wall);
+					this.physics.add.overlap(wall, this.bullets, (wall, bullet) => {
+						wall.destroy();
+						bullet.destroy();
+					});
 				},
 				loop: true
 			}	
@@ -109,7 +115,12 @@ export default class Play extends Phaser.Scene {
 		this.add.existing(bullet);
 		this.physics.add.existing(bullet);
 		this.add.group(bullet, { runChildUpdate: true });
+		this.bullets.push(bullet);
 		bullet.fire(character.x, character.y);
+		this.physics.add.overlap(bullet, this.walls, (bullet, wall) => { 
+			bullet.destroy();
+			wall.destroy();
+		});
 	}
 	/* END-USER-CODE */
 }
