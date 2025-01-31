@@ -1,6 +1,8 @@
 
 // You can write more code here
 
+import Bullet from "../components/Bullet";
+
 /* START OF COMPILED CODE */
 
 /* START-USER-IMPORTS */
@@ -80,17 +82,22 @@ export default class Play extends Phaser.Scene {
 		}
 
 		cursors.space.onDown = () => this.createBullet(character);
-		
+
 	}
 
 
 	private createBullet(character: Phaser.GameObjects.Sprite & {
 		body: Phaser.Physics.Arcade.Body;
 	}) {
-		const bullet = this.physics.add.sprite(character.x, character.y, "bullet");
-		bullet.scaleX = 0.08;
-		bullet.scaleY = 0.08;
-		bullet.setVelocityY(-200);
+		const bullet = new Bullet(this, character.x, character.y);
+		this.add.existing(bullet);
+		this.physics.add.existing(bullet);
+		this.add.group(bullet, { runChildUpdate: true });
+		bullet.fire(character.x, character.y);
+		// const bullet = this.physics.add.sprite(character.x, character.y, "bullet");
+		// bullet.scaleX = 0.08;
+		// bullet.scaleY = 0.08;
+		// bullet.setVelocityY(-200);
 	}
 	/* END-USER-CODE */
 }
