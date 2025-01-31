@@ -2,6 +2,11 @@
     "section1": {
         "files": [
             {
+                "url": "assets/bullet.webp",
+                "type": "image",
+                "key": "bullet"
+            },
+            {
                 "url": "assets/DALL·E Jan 30 2025.png",
                 "type": "image",
                 "key": "DALL·E Jan 30 2025"

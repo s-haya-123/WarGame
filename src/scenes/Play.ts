@@ -76,8 +76,21 @@ export default class Play extends Phaser.Scene {
 		} else if(cursors.right.isDown) {
 			character.body.setVelocityX(160);
 		} else {
-			// character.body.setVelocityX(0);
+			character.body.setVelocityX(0);
 		}
+
+		cursors.space.onDown = () => this.createBullet(character);
+		
+	}
+
+
+	private createBullet(character: Phaser.GameObjects.Sprite & {
+		body: Phaser.Physics.Arcade.Body;
+	}) {
+		const bullet = this.physics.add.sprite(character.x, character.y, "bullet");
+		bullet.scaleX = 0.08;
+		bullet.scaleY = 0.08;
+		bullet.setVelocityY(-200);
 	}
 	/* END-USER-CODE */
 }
