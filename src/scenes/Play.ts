@@ -2,6 +2,8 @@
 // You can write more code here
 
 import Bullet from "../components/Bullet";
+import { decidePosition, generateWall } from "../components/generateWall";
+import Wall from "../components/Wall";
 
 /* START OF COMPILED CODE */
 
@@ -59,6 +61,20 @@ export default class Play extends Phaser.Scene {
 				body: Phaser.Physics.Arcade.Body;
 			};
 		}
+
+		this.time.addEvent(
+			{
+				delay: 2000,
+				callback: () => {
+					console.log('create wall');
+					const wall = new Wall(this);
+					this.add.existing(wall);
+					const position = generateWall(decidePosition());
+					wall.generate(position.x, position.y);
+				},
+				loop: true
+			}	
+		)
 	}
 
 	update(time: number, delta: number): void {
@@ -94,10 +110,6 @@ export default class Play extends Phaser.Scene {
 		this.physics.add.existing(bullet);
 		this.add.group(bullet, { runChildUpdate: true });
 		bullet.fire(character.x, character.y);
-		// const bullet = this.physics.add.sprite(character.x, character.y, "bullet");
-		// bullet.scaleX = 0.08;
-		// bullet.scaleY = 0.08;
-		// bullet.setVelocityY(-200);
 	}
 	/* END-USER-CODE */
 }
