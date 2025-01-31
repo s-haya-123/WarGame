@@ -20,7 +20,7 @@ export default class Title extends Phaser.Scene {
 	editorCreate(): void {
 
 		// ______________________Jan_30_2025
-		const ______________________Jan_30_2025 = this.add.image(0, 0, "デフォルメキャラリクエスト ゲーム背景 Jan 30 2025");
+		const ______________________Jan_30_2025 = this.add.image(0, 0, "TitleBackGround");
 		______________________Jan_30_2025.scaleX = 1.2489809409725727;
 		______________________Jan_30_2025.scaleY = 0.8267346463681621;
 		______________________Jan_30_2025.setOrigin(0, 0);

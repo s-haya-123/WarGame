@@ -25,7 +25,7 @@ export default class Play extends Phaser.Scene {
 		image_1.scaleX = 1.305707420481132;
 
 		// charactor
-		const charactor = this.add.sprite(704, 660, "DALL·E Jan 30 2025") as Phaser.GameObjects.Sprite & { body: Phaser.Physics.Arcade.Body };
+		const charactor = this.add.sprite(704, 660, "charactor") as Phaser.GameObjects.Sprite & { body: Phaser.Physics.Arcade.Body };
 		charactor.blendMode = Phaser.BlendModes.SKIP_CHECK;
 		charactor.scaleX = 0.11595452439536336;
 		charactor.scaleY = 0.11595452439536336;
